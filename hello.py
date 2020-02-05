@@ -5,7 +5,7 @@ from flask import jsonify
 app = Flask(__name__)
 members = [
         'name':'Adam',
-        'birthday':'02.03.2000'
+        'birthday':'03.03.2000'
 ]
     
 
