@@ -1,11 +1,14 @@
 from flask import Flask
 from flask import Request
+from flask import escape
 from flask import jsonify
 
 app = Flask(__name__)
 members = [
-        'name':'Adam',
-        'birthday':'03.03.2000'
+	('Adam','03.03.2000'),
+    ('Berthold', '03.06.1943'),
+    ('Dietrich', '23.07.1968'),
+    ('Carlotta', '12.01.1953')
 ]
     
 
@@ -15,7 +18,7 @@ def index_page():
 
 @app.route('/members')
 def get_members():
-    return jsonify(name=members.name,birthday=members.birthday)
+    return jsonify(members)
 
 @app.route('/hello/<username>')
 @app.route('/hello')
