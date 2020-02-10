@@ -37,3 +37,6 @@ export APP_CONFIG=development
 
 ```
 
+#### Flask extensions being used
+
+* flask-wtf: Flask-WTF is for web forms
