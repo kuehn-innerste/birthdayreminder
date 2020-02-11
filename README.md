@@ -40,3 +40,13 @@ export APP_CONFIG=development
 #### Flask extensions being used
 
 * flask-wtf: Flask-WTF is for web forms
+* flask-sqlalchemy: a SQL ORM for different SQL databases (MySQL, SQLite, PostgreSQL...)
+* flask-migrate: Wrapper for [Alembic](https://bitbucket.org/zzzeek/alembic), a
+  database migration framework for SQLAlchemy.
+
+### flask security
+
+With WTForms we use the `{{ form.hidden_tag() }}` in the template to include
+some CSRF forgery. Using this together with a `SECRET_KEY` defined for the 
+Flask configuration is enough for this.
+
